@@ -18,16 +18,25 @@ export function RepositoryList() {
     
     setNewRepository(newRepository)
 
-    !newRepository ? 
-    fetch(`https://api.github.com/orgs/microsoft/repos`)
-      .then((response) => response.json())
-      .then((data) => setRepositories(data)) : 
+    if (!newRepository) {
+      fetch(`https://api.github.com/orgs/microsoft/repos`)
+        .then((response) => response.json())
+        .then((data) => setRepositories(data))
+    } else {
       fetch(`https://api.github.com/orgs/${[newRepository]}/repos`)
-      .then((response) => response.json())
-      .then((data) => setRepositories(data))
-    
-    console.log(newRepository)
-    return newRepository;
+        .then((response) => {
+        //Verifica se a resposta é válida (não é um erro como 404, etc)
+        if(response.ok) {
+          // Caso seja válida, retorna o json da mesma maneira
+          return response.json()
+        } else {
+          //Caso a response não seja válida, retorna um erro
+          throw new Error('Não foi possível encontrar o repositório')
+        }
+      })
+        .then((data) => setRepositories(data))
+        .catch(err => alert(err.message)) //Adiciona um catch para recuperar caso dê um erro na requisição e exibir o erro em tela
+    }
   }
 
   return (
