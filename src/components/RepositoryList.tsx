@@ -41,21 +41,22 @@ export function RepositoryList() {
 
   return (
     <section className="repository-list">
-      <h1>Repositories List</h1>
+      <h1>Search Repository</h1>
       <div className="input-group">
           <input 
+           className="input-search"
             type="text" 
-            placeholder="Adicionar novo todo" 
+            placeholder="Search for a organization github repository" 
             onChange={(e) => setNewRepository(e.target.value)}
             value={newRepository}
           />
-          <button type="submit" data-testid="add-task-button" onClick={getRepository}>
+          <button className="button-search" type="submit" onClick={getRepository}>
             Search repository
           </button>
         </div>
       <ul>
         {repositories.map((repository) => (
-          <RepositoryItem key={repository.name} repository={repository} />
+          <RepositoryItem  key={repository.name} repository={repository} />
         ))}
       </ul>
     </section>

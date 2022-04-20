@@ -8,3 +8,43 @@ body {
     font: 16px "Helvetica Neue",Helvetica,Arial;
     color: #121214
 }
+
+/* Header */
+
+.header {
+    background-color: #121214;
+    height: 80px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+
+    padding: 40px;
+}
+
+/* Input Search */
+
+.input-search {
+    height: 40px;
+    width: 400px;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 1rem;
+    margin: 0 8px 40px 0;
+}
+
+/* Button */
+
+.button-search {
+    height: 40px;
+    background-color: #121214;
+    border: unset;
+    border-radius: 4px;
+    padding: 0 12px;
+    color: #fff;
+    font-size: 1rem;
+    pointer-events: auto;
+}

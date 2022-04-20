@@ -1,3 +1,5 @@
+import "../styles/repositories.scss";
+
 interface RepositoryItemProps {
     repository: {
         name: string;
@@ -8,7 +10,7 @@ interface RepositoryItemProps {
 
 export function RepositoryItem(props: RepositoryItemProps) {
   return (
-    <li>
+    <li className="card-item">
       <strong>{props.repository.name}</strong>
       <p>{props.repository.description}</p>
 
