@@ -4,6 +4,11 @@ The app consumes the Github public API, fetching data and rendering on the scree
 
 Although all requirements were met, I've improved this app by implementing a search feature allowing look at companies repositories from an input text element.
 
+## App Working
+
+See the app working on link below:
+https://mauriliosouza-rs-ignite-react-github-explorer.netlify.app/
+
 ## Next Steps
 
 - Layout improvements
