@@ -13,6 +13,8 @@ https://mauriliosouza-rs-ignite-react-github-explorer.netlify.app/
 
 - Layout improvements
 - Allow search for users or companies
+- 'Not found' state
+- 'Empty state' page
 
 ## 💻 &nbsp;Project Stack
 
