@@ -46,12 +46,12 @@ export function RepositoryList() {
           <input 
            className="input-search"
             type="text" 
-            placeholder="Search for a organization github repository" 
+            placeholder="Type an organization name" 
             onChange={(e) => setNewRepository(e.target.value)}
             value={newRepository}
           />
           <button className="button-search" type="submit" onClick={getRepository}>
-            Search repository
+            Search
           </button>
         </div>
       <ul>
